@@ -745,13 +745,12 @@ to {
 .project-list {
   display: flex;
   animation: scroll 20s linear infinite;
-  width: max-content; /* Ensure the content width adapts to the items */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .project-item {
   display: inline-block;
-  width: 10px;
+  width: 397px;
   margin-right: 10px;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
@@ -785,18 +784,31 @@ to {
 
 @media only screen and (max-width: 768px) {
   .project-item {
-    width: 60%; /* Adjust width for smaller screens */
+    width: 80%; /* Adjust width for smaller screens */
+    margin-right: 0; /* Remove margin to prevent overflow */
   }
 }
 
 @media only screen and (max-width: 576px) {
   .project-item {
-    width: 100%; /* Adjust width for smaller screens */
+    width: 90%; /* Adjust width for smaller screens */
     margin-right: 5px; /* Adjust spacing as needed */
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .project-item {
+    width: 100%; /* Full width for very small screens */
+    margin-right: 5px; /* Adjust spacing as needed */
+  }
+}
 
+@media only screen and (max-width: 360px) {
+  .project-item {
+    width: 100%; /* Full width for the smallest screens */
+    margin-right: 5px; /* Adjust spacing as needed */
+  }
+}
 
 
 
@@ -1588,7 +1600,7 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
-  margin-left: 33%;
+  
 }
 
 label {
@@ -1731,13 +1743,14 @@ input[type="file"] {
 
 .contact-info, .contact-form {
   flex: 1;
-  max-width: 500px;
+  max-width: 1200px;
   margin: 20px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #fff;
 }
+
 
 .contact-info {
   display: flex;
@@ -1771,6 +1784,7 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .contact-form h2 {
@@ -1782,7 +1796,7 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
+  margin: auto;
 }
 
 .input-field {
